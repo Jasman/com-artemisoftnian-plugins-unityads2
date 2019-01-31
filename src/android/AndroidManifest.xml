@@ -3,7 +3,8 @@
     package="com.unity3d.ads"
     android:versionCode="2201"
     android:versionName="2.2.1" >
-
+<application android:name="android.support.multidex.MultiDexApplication" > </application>
+    
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="23" />
