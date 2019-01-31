@@ -17,5 +17,9 @@ android {
   }
   defaultConfig {
         multiDexEnabled true
+        dexOptions {
+         preDexLibraries = false
+          javaMaxHeapSize "4g"
+        }
     }
 }
