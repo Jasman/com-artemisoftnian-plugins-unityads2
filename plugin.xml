@@ -45,7 +45,7 @@
     <source-file src="src/android/com/artemisoftnian/plugin/UnityAds2.java"   target-dir="src/com/artemisoftnian/plugin" />
 
     <!--resource-file src="libs/unity-ads.aar" target="/libs/unity-ads.aar" /-->
-    <resource-file src="src/android/libs/classes.jar" target="/libs/classes.jar" />
+    <resource-file src="src/android/libs/classes.jar" target="src/android/libs/classes.jar" />
 		<framework src="src/android/unityads2.gradle" custom="true" type="gradleReference" />
 
 
