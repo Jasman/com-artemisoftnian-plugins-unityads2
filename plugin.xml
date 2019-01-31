@@ -41,7 +41,7 @@
             android:hardwareAccelerated="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
     </config-file> 
-	<dependency id="phonegap-plugin-multidex" version="~1.0.0"/>
+	
     <source-file src="src/android/com/artemisoftnian/plugin/UnityAds2.java"   target-dir="src/com/artemisoftnian/plugin" />
 
     <!--resource-file src="libs/unity-ads.aar" target="/libs/unity-ads.aar" /-->
