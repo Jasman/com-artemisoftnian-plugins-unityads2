@@ -6,9 +6,8 @@ repositories{
 }
 
 dependencies {
-   implementation fileTree(dir: 'libs', include: ['*.jar'])
-   implementation name:'classes', ext:'jar'
-   implementation 'com.android.support:multidex:1.0.3'
+  compileOnly files('libs/classes.jar')
+  implementation 'com.android.support:multidex:1.0.3'
 }
 
 android {
