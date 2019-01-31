@@ -15,11 +15,12 @@ android {
     exclude 'META-INF/NOTICE'
     exclude 'META-INF/LICENSE'
   }
-  defaultConfig {
-        multiDexEnabled true
-        dexOptions {
+   dexOptions {
          preDexLibraries = false
           javaMaxHeapSize "4g"
         }
+  defaultConfig {
+        multiDexEnabled true
+       
     }
 }
