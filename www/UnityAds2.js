@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 var PLUGIN_NAME = 'UnityAds2';
-var self = this;
+
 // METHODS
 exports.UnityAdsInit = function(gameId, isTest, isDebug, fn) {
 
@@ -29,10 +29,10 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
     function success (str){
         var resultArray=JSON.parse(str)
         if(resultArray[1]="READY"){
-            self.onVideoShowReady(videoAdPlacementId);
+            this.onVideoShowReady(videoAdPlacementId);
         }
         else if(resultArray[1]="SHOWING"){
-             self.onVideoShow(videoAdPlacementId);
+             this.onVideoShow(videoAdPlacementId);
         }
         //fn(null, str);
     }
