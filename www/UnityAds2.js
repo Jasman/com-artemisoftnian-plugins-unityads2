@@ -27,6 +27,7 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
     var args = [videoAdPlacementId];  
 
     function success (str){
+        var resultArray=JSON.parse(str)
         if(resultArray[1]="READY"){
             self.onVideoShowReady(videoAdPlacementId);
         }
