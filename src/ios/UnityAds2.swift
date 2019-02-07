@@ -114,12 +114,14 @@ class UnityAds2: CDVPlugin, UnityAdsDelegate {
         if UnityAds.isReady(videoAdPlacementId) {
             UnityAds.show(self.viewController, placementId: videoAdPlacementId)
             result = CDVPluginResult(status: CDVCommandStatus_OK, messageAs:  String(format: "[\"%@\",\"%@\"]", videoAdPlacementId, "READY")  )
+             result?.setKeepCallbackAs(true)
         }
         else{
             result = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: String(format: "[\"%@\",\"%@\"]", videoAdPlacementId, "NOT_READY") )
+            result?.setKeepCallbackAs(false)
         }
         
-        result?.setKeepCallbackAs(true)
+        
         commandDelegate!.send(result, callbackId: command.callbackId)
         
     }
