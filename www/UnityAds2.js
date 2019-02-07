@@ -27,6 +27,12 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
     var args = [videoAdPlacementId];  
 
     function success (str){
+        if(resultArray[1]="READY"){
+            self.onVideoShowReady(videoAdPlacementId);
+        }
+        else if(resultArray[1]="SHOWING"){
+             self.onVideoShow(videoAdPlacementId);
+        }
         fn(null, str);
     }
     function error (str){
@@ -50,3 +56,6 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 
     exec(success, error, PLUGIN_NAME,METHOD_NAME,args);      
 };
+
+exports.onVideoShow=null;
+exports.onVideoShowReady=null;
