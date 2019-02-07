@@ -32,9 +32,9 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
         if(resultArray[1]="SHOWING"){
              this.onVideoShow(videoAdPlacementId);
        }
-       if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
+      // if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
              fn(null, str);
-       }
+       //}
     }
     function error (str){
         fn(str, null);
