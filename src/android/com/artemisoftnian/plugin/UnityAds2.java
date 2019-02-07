@@ -204,7 +204,10 @@ public class UnityAds2 extends CordovaPlugin {
 
 		if(UnityAds.isReady()){
 			UnityAds.show(this.cordova.getActivity(), videoAdPlacementId);
-			//msg = String.format("[\"%s\",\"%s\"]", videoAdPlacementId, "READY");
+			msg = String.format("[\"%s\",\"%s\"]", videoAdPlacementId, "READY");
+			PluginResult result = new PluginResult(PluginResult.Status.OK, msg);
+			result.setKeepCallback(true);
+			callbackContext.sendPluginResult(result);
 		}else{
 			msg = String.format("[\"%s\",\"%s\"]", videoAdPlacementId, "NOT_READY");
 			PluginResult result = new PluginResult(PluginResult.Status.OK, msg);
