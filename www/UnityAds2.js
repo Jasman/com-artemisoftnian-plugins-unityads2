@@ -31,10 +31,13 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
        var resultArray=JSON.parse(str)
         console.log(resultArray[1]);
         
-        if(resultArray[1]="SHOWING"){
+        if(resultArray[1]=="SHOWING"){
           self.onVideoShow(resultArray[0]);
         }
-        else if(resultArray[1]="READY"){
+        else if(resultArray[1]=="READY"){
+            self.onReadyVideoShow(resultArray[0]);
+        }
+        else if(resultArray[1]=="NOT_READY"){
             self.onReadyVideoShow(resultArray[0]);
         }
       // if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
@@ -65,3 +68,4 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 
 exports.onVideoShow=null;
 exports.onReadyVideoShow=null;
+exports.onNotReadyVideoShow=null;
