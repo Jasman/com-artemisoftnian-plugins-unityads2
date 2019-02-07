@@ -1,4 +1,5 @@
 var exec = require('cordova/exec');
+var cordova = require('cordova');
 
 var PLUGIN_NAME = 'UnityAds2';
 
@@ -30,7 +31,7 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
        var resultArray=JSON.parse(str)
         console.log(resultArray[1]);
         if(resultArray[1]="SHOWING"){
-           
+          
         }
       // if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
              fn(null, str);
