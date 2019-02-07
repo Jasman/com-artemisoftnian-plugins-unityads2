@@ -27,15 +27,15 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
     var args = [videoAdPlacementId];  
 
     function success (str){
-       // var resultArray=JSON.parse(str)
-       // window.alert(resultArray[1]);
-      //  if(resultArray[1]="READY"){
+       var resultArray=JSON.parse(str)
+        console.log(resultArray[1]);
+        if(resultArray[1]="READY"){
             
-          //  this.onVideoShowReady(videoAdPlacementId);
-       // }
-       // else if(resultArray[1]="SHOWING"){
-          //   this.onVideoShow(videoAdPlacementId);
-       // }
+            this.onVideoShowReady(videoAdPlacementId);
+        }
+        else if(resultArray[1]="SHOWING"){
+             this.onVideoShow(videoAdPlacementId);
+        }
         fn(null, str);
     }
     function error (str){
