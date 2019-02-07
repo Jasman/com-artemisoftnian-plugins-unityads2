@@ -34,7 +34,7 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
         else if(resultArray[1]="SHOWING"){
              self.onVideoShow(videoAdPlacementId);
         }
-        fn(null, str);
+        //fn(null, str);
     }
     function error (str){
         fn(str, null);
