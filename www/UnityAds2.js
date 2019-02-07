@@ -34,6 +34,9 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
         if(resultArray[1]="SHOWING"){
           self.onVideoShow(resultArray[0]);
         }
+        else if(resultArray[1]="READY"){
+            self.onReadyVideoShow(resultArray[0]);
+        }
       // if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
             // fn(null, str);
        //}
@@ -61,4 +64,4 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 };
 
 exports.onVideoShow=null;
-exports.onVideoShowReady=null;
+exports.onReadyVideoShow=null;
