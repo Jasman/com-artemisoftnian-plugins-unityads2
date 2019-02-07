@@ -59,4 +59,4 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 };
 
 exports.onVideoShow=null;
-exports.onVideoShowReady=null;
+exports.onVideoShowReady=function(videoAdPlacementId);
