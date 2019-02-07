@@ -58,5 +58,5 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
     exec(success, error, PLUGIN_NAME,METHOD_NAME,args);      
 };
 
-exports.onVideoShow=null;
+exports.onVideoShow=function(videoAdPlacementId);
 exports.onVideoShowReady=function(videoAdPlacementId);
