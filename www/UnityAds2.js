@@ -29,13 +29,13 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
     function success (str){
         var resultArray=JSON.parse(str)
         window.alert(resultArray[1]);
-        if(resultArray[1]="READY"){
+      //  if(resultArray[1]="READY"){
             
-            this.onVideoShowReady(videoAdPlacementId);
-        }
-        else if(resultArray[1]="SHOWING"){
-             this.onVideoShow(videoAdPlacementId);
-        }
+          //  this.onVideoShowReady(videoAdPlacementId);
+       // }
+       // else if(resultArray[1]="SHOWING"){
+          //   this.onVideoShow(videoAdPlacementId);
+       // }
         fn(null, str);
     }
     function error (str){
