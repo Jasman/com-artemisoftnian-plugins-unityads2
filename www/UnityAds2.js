@@ -22,7 +22,7 @@ exports.UnityAdsInit = function(gameId, isTest, isDebug, fn) {
 };
 
 exports.ShowVideoAd = function(videoAdPlacementId, fn) {
-
+    var self = this;
     var METHOD_NAME = "ShowVideoAd"; 
     var args = [videoAdPlacementId];  
 
