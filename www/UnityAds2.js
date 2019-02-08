@@ -38,11 +38,18 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
             self.onReadyVideoShow(resultArray[0]);
         }
         else if(resultArray[1]=="NOT_READY"){
-            self.onReadyVideoShow(resultArray[0]);
+            self.onNotReadyVideoShow(resultArray[0]);
         }
-      // if(resultArray[1]="READY" or resultArray[1]="NOT_READY"){
-            // fn(null, str);
-       //}
+        else if(resultArray[1]=="COMPLETED"){
+            self.onVideoCompleted(resultArray[0]);
+        }
+        else if(resultArray[1]=="SKIPPED"){
+            self.onVideoSkipped(resultArray[0]);
+        }
+        else{
+            self.onVideoError(resultArray[0],resultArray[1]);
+        }
+     
     }
     function error (str){
         fn(str, null);
@@ -69,3 +76,6 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 exports.onVideoShow=null;
 exports.onReadyVideoShow=null;
 exports.onNotReadyVideoShow=null;
+exports.onVideoCompleted=null;
+exports.onVideoSkipped=null;
+exports.onVideoError=null;
