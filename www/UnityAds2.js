@@ -35,10 +35,10 @@ exports.ShowVideoAd = function(videoAdPlacementId, fn) {
           self.onVideoShow(resultArray[0]);
         }
         else if(resultArray[1]=="READY"){
-            self.onReadyVideoShow(resultArray[0]);
+            self.onReadyVideo(resultArray[0]);
         }
         else if(resultArray[1]=="NOT_READY"){
-            self.onNotReadyVideoShow(resultArray[0]);
+            self.onNotReadyVideo(resultArray[0]);
         }
         else if(resultArray[1]=="COMPLETED"){
             self.onVideoCompleted(resultArray[0]);
@@ -74,8 +74,8 @@ exports.GetPlacementState = function(videoAdPlacementId, fn) {
 };
 
 exports.onVideoShow=null;
-exports.onReadyVideoShow=null;
-exports.onNotReadyVideoShow=null;
+exports.onReadyVideo=null;
+exports.onNotReadyVideo=null;
 exports.onVideoCompleted=null;
 exports.onVideoSkipped=null;
 exports.onVideoError=null;
